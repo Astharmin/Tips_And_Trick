@@ -1,0 +1,2 @@
+Hola desde la función "manejo_archivos"
+Usando el Context Manager con @decoradores

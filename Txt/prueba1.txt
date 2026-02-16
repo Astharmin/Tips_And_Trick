@@ -1,0 +1,2 @@
+Hola desde la clase ManejoArchivos
+Usando el Context Manager
