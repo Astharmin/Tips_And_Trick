@@ -7,12 +7,18 @@ class Padre:
     def get_variable_privada(self):
         return self.__variable_privada
 
+    def __metodo_privado(self):
+        print('Accediendo metodo privado en clase Padre')
+
 class Hijo(Padre):
     def __init__(self):
         super().__init__()
         self.variable_publica = 'Sobre Escrita 1'
         self._variable_protegida = 'Sobre Escrita 2'
         self.__variable_privada = 'Sobre Escrita 3'
+
+    def __metodo_privado(self):
+        print('Accediendo metodo privado en clase Hija')
 
 if __name__ == '__main__':
     # Imprimir todos los atributos de la clase
@@ -35,3 +41,7 @@ if __name__ == '__main__':
     print(f'Accseso privado desde hijo con Name mangling :{hijo._Hijo__variable_privada}')
     print(f'Accseso privado desde padre con Name mangling :{hijo._Padre__variable_privada}')
     
+    # Prueba de acceso a metodos privados
+    padre._Padre__metodo_privado()
+    hijo._Hijo__metodo_privado()
+    hijo._Padre__metodo_privado()
