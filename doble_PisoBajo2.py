@@ -20,6 +20,13 @@ class Hijo(Padre):
     def __metodo_privado(self):
         print('Accediendo metodo privado en clase Hija')
 
+# Prueba de variable global
+_Prueba__variable_global = 5
+
+class Prueba:
+    def obtener_variable(self):
+        return __variable_global
+
 if __name__ == '__main__':
     # Imprimir todos los atributos de la clase
     padre = Padre()
@@ -45,3 +52,10 @@ if __name__ == '__main__':
     padre._Padre__metodo_privado()
     hijo._Hijo__metodo_privado()
     hijo._Padre__metodo_privado()
+
+    # Prueba de acceso Variable Global
+    print(f'Accediendo variable global: {_Prueba__variable_global}')
+
+    # Usando name mangling y clase para acceso a la variable
+    prueba = Prueba()
+    print(f'Accediendo variable global dentro de clase: {prueba.obtener_variable()}')
