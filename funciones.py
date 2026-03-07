@@ -28,3 +28,11 @@ for fun in lita_fun:
 
 # Acceder directamente a funciones almacenadas
 print(lita_fun[1]('Saludos desde variable_fun'))
+
+# Higher-order Funtions
+def saludo(argumento_funcion):
+    referencia_funcion = argumento_funcion('Hola desde mi funcion')
+    print(referencia_funcion)
+
+# Llamamos a la funcion
+saludo(mayusculas)
