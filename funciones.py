@@ -36,3 +36,11 @@ def saludo(argumento_funcion):
 
 # Llamamos a la funcion
 saludo(mayusculas)
+
+# Nueva Implementacion de la funcion como argumento
+def minusculas (texto):
+    return texto.lower()
+
+saludo(minusculas)
+
+# Ejemplo explicito de Higher-order Funtions
