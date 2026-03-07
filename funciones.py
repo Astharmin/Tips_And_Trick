@@ -44,3 +44,5 @@ def minusculas (texto):
 saludo(minusculas)
 
 # Ejemplo explicito de Higher-order Funtions
+print(list(map(mayusculas,['Texto 1','Texto 2','Texto 3'])))
+print(list(map(minusculas,['Texto 1','Texto 2','Texto 3'])))
