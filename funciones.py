@@ -46,3 +46,17 @@ saludo(minusculas)
 # Ejemplo explicito de Higher-order Funtions
 print(list(map(mayusculas,['Texto 1','Texto 2','Texto 3'])))
 print(list(map(minusculas,['Texto 1','Texto 2','Texto 3'])))
+
+# Funciones anidadas
+def mostrar(text):
+    def convertir_minusculas(t):
+        return t.lower()
+    return convertir_minusculas(text)
+
+print(mostrar('Desde funcion anidada...'))
+
+# No se puede acceder:
+
+# convertir_minusculas('Texto 1')
+# mostrar.convertir_minusculas('Texto 1')
+
