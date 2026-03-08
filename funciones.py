@@ -60,3 +60,21 @@ print(mostrar('Desde funcion anidada...'))
 # convertir_minusculas('Texto 1')
 # mostrar.convertir_minusculas('Texto 1')
 
+# Accedemos a la funcion anidada retornandola
+def hablar(volumen):
+    def minusculas(text):
+        return text.lower()
+    def mayusculas(text):
+        return text.upper()
+
+    if volumen > 0.5:
+        return mayusculas
+    else:
+        return minusculas
+
+# Forma de usar funcion anidada
+print(hablar(0.6)('hablar fuerte...'))
+print(hablar(0.2)('hablar suave...'))
+
+variable_min = hablar(0.4)
+print(variable_min('Hablo Suave...'))
