@@ -78,3 +78,18 @@ print(hablar(0.2)('hablar suave...'))
 
 variable_min = hablar(0.4)
 print(variable_min('Hablo Suave...'))
+
+# Closure
+def hablar(text, vol):
+    def min():
+        return text.lower()
+    def mayus():
+        return text.upper()
+
+    if vol > 0.5:
+        return mayus()
+    else:
+        return min()
+
+print(hablar('hablar fuerte...', 0.8))
+print(hablar('Hablar bajo...', 0.4))
