@@ -105,3 +105,22 @@ var_mostar2 = mostrar('licenciado')
 
 print(var_mostar('Armando Paredes'))
 print(var_mostar2('Roberto Angulo'))
+
+# Funcion callable
+print(f'Mostrar si se puede llamar esta funcion: {callable(mostrar)}')
+print(f'Se puede llamar esta funcion: {callable(hablar)}')
+print(f'Se puede llamar este objeto: {callable(var_mostar)}')
+
+print(f'objeto str se puede llamar: {callable('cualquier texto')}')
+
+class Mostrar:
+    def __init__(self, titulo):
+        self.titulo = titulo
+
+    def __call__(self, mensaje):
+        return self.titulo + '. ' + mensaje
+
+mostar_doc = Mostrar('Doctora')
+print(mostar_doc('Rosa Meltroso'))
+
+print(f'Se puede llamar este objeto: {callable(mostar_doc)}')
