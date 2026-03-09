@@ -93,3 +93,15 @@ def hablar(text, vol):
 
 print(hablar('hablar fuerte...', 0.8))
 print(hablar('Hablar bajo...', 0.4))
+
+# Con Closure se pueden pre conigurar una funcion
+def mostrar(titulo):
+    def saludar(mensaje):
+        return f'{titulo}. {mensaje}'
+    return saludar
+
+var_mostar = mostrar('Ingeniero')
+var_mostar2 = mostrar('licenciado')
+
+print(var_mostar('Armando Paredes'))
+print(var_mostar2('Roberto Angulo'))
