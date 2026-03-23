@@ -33,4 +33,4 @@ mostar_ing = mostrar('Ingeniero')
 mostar_lic = mostrar('Licenciado')
 
 print(mostar_ing('Carlos Aldana'))
-print(mostar_lic('Rosa Milanos'))
+print(mostar_lic('Armando Casas'))
