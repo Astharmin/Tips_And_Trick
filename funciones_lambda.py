@@ -24,3 +24,13 @@ for valor in range(-3,4):
 # Aplicamos en una funcion lambda
 lista_ordenada = sorted(range(-3,4), key=lambda valor: valor*valor)
 print(lista_ordenada)
+
+# Funcion lambda con Closure
+def mostrar(titulo):
+    return lambda mensaje: titulo + '. ' + mensaje
+
+mostar_ing = mostrar('Ingeniero')
+mostar_lic = mostrar('Licenciado')
+
+print(mostar_ing('Carlos Aldana'))
+print(mostar_lic('Rosa Milanos'))
