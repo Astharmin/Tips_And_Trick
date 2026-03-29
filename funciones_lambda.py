@@ -34,3 +34,24 @@ mostar_lic = mostrar('Licenciado')
 
 print(mostar_ing('Carlos Aldana'))
 print(mostar_lic('Armando Casas'))
+
+# Ejemplos de funcion lambda no recomendada
+class Prueba:
+    mostar = lambda self: print('Funcion Mostrar...')
+    saludar = lambda self: print('Funcion Saludar...')
+
+prueba = Prueba()
+prueba.mostar()
+prueba.saludar()
+
+# funcion lambda No recomendada: Mucha complejidad al codigo
+lista_pares = list(filter(
+    lambda valor: valor % 2 == 0,
+    range(10)
+))
+print(lista_pares)
+
+# Forma recomendada
+lista_pares_mod = [valor for valor in range(10)
+                   if valor % 2 == 0]
+print(lista_pares_mod)
