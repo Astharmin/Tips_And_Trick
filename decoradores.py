@@ -1,4 +1,5 @@
 # Ejemplos comunes con decoradores: loggin, seguridad, caching
+
 def deco_env(funcion):
     print('Estamos dentro de la funcion decoradora')
     return funcion
@@ -31,3 +32,23 @@ def saludar_minus():
     return 'hola...'
 
 print(saludar_minus())
+
+#<-------------->
+# Decoradores Multiples
+# <strong><em>Hola</em></strong>
+def negritas(fun):
+    def fun_envol():
+        return '<strong>' + fun() + '</strong>'
+    return fun_envol
+
+def enfatizar(fun):
+    def fun_envol():
+        return '<em>' + fun() + '</em>'
+    return fun_envol
+
+@negritas
+@enfatizar
+def saludar_html():
+    return 'Hola con HTML'
+
+print(saludar_html())
