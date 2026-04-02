@@ -16,3 +16,18 @@ def saludar_fun():
     return 'Saludos desde funcion a decorar'
 
 print(saludar_fun())
+
+# Decorador que convierte el texto a mayusculas
+def mayus(fun):
+    def envol():
+        # Mandamos a llamar la funcion original (Closure)
+        resultado_orig = fun()
+        resutado_modi = resultado_orig.upper()
+        return resutado_modi
+    return envol
+
+@mayus
+def saludar_minus():
+    return 'hola...'
+
+print(saludar_minus())
