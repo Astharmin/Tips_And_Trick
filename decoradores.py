@@ -35,7 +35,7 @@ print(saludar_minus())
 
 #<-------------->
 # Decoradores Multiples
-# <strong><em>Hola</em></strong>
+
 def negritas(fun):
     def fun_envol():
         return '<strong>' + fun() + '</strong>'
@@ -52,3 +52,18 @@ def saludar_html():
     return 'Hola con HTML'
 
 print(saludar_html())
+
+#<---------->
+# Decoradores con argumento
+
+def decorador_arg(fun):
+    def fun_envol(*args, **kwargs):
+        print('Se esta ejecutando Decorador')
+        return fun(*args, **kwargs)
+    return fun_envol
+
+@decorador_arg
+def funcion_saludar(titulo, nombre):
+    print(f'{titulo}. {nombre}')
+
+funcion_saludar('Ingeniera', 'Maria Quiroz')
