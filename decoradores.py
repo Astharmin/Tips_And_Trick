@@ -59,10 +59,20 @@ print(saludar_html())
 def decorador_arg(fun):
     def fun_envol(*args, **kwargs):
         print('Se esta ejecutando Decorador')
+        print('args: ', args)
+        print('kwargs: ', kwargs)
 
         list_arg = []
         for indice, val_tupla in enumerate(args):
             list_arg.append(args[indice].upper())
+
+        # Agregamos mas elementos a la lista
+        list_arg.append('nuevo arg 1')
+        list_arg.append('nuevo arg 2')
+
+        # Agregamos informacion al diccionario
+        kwargs['valor1'] = 'Nuevo valor 1'
+        kwargs['valor2'] = 'Nuevo valor 2'
 
         # Propagamos los parametros a la funcion principal
         # return fun(*args, **kwargs)
@@ -72,7 +82,11 @@ def decorador_arg(fun):
     return fun_envol
 
 @decorador_arg
-def funcion_saludar(titulo, nombre):
+def funcion_saludar(titulo, nombre, *args, **kwargs):
     print(f'{titulo}. {nombre}')
+
+    # Imprimimos los arg variables
+    print('Args: ', args)
+    print('Kwargs: ', kwargs)
 
 funcion_saludar('Ingeniera', 'Maria Quiroz')
