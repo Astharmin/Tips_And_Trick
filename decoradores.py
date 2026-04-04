@@ -59,7 +59,16 @@ print(saludar_html())
 def decorador_arg(fun):
     def fun_envol(*args, **kwargs):
         print('Se esta ejecutando Decorador')
-        return fun(*args, **kwargs)
+
+        list_arg = []
+        for indice, val_tupla in enumerate(args):
+            list_arg.append(args[indice].upper())
+
+        # Propagamos los parametros a la funcion principal
+        # return fun(*args, **kwargs)
+
+        # Propagamos los valores modificados
+        return fun(*list_arg, **kwargs)
     return fun_envol
 
 @decorador_arg
