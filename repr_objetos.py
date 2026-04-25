@@ -22,10 +22,16 @@ class AutoStr:
                 f'Modelo: {self.modelo}, '
                 f'Color: {self.color}')
 
+    # def __repr__(self):
+    #     return (f'repr: Marca: {self.marca}, '
+    #             f'Modelo: {self.modelo}, '
+    #             f'Color: {self.color}')
+
     def __repr__(self):
-        return (f'repr: Marca: {self.marca}, '
-                f'Modelo: {self.modelo}, '
-                f'Color: {self.color}')
+        return (f'{self.__class__.__name__}('
+                f'{self.marca!r},'
+                f'{self.modelo!r},'
+                f'{self.color!r})')
 
 audi_a1 = AutoStr('Audi', 'A1', 'Negro')
 # Hay varias formas de imprimir un Objeto
