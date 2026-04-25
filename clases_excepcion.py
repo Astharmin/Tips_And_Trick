@@ -8,7 +8,20 @@ def validar(nomb_cplt):
         print('Validacion correcta...')
 
 # Validacion personalizada
-class NombreCorto(ValueError):
+# class NombreCorto(ValueError):
+#     pass
+#
+# def validar_mejorada(nomb_cplt):
+#     if len(nomb_cplt) < 3:
+#         raise NombreCorto(nomb_cplt)
+#     else:
+#         print('Validacion correcta...')
+
+# Es buena practica crear una clase base y de alli extender las demas
+class ClaseExcepcion(TypeError):
+    pass
+
+class NombreCorto(ClaseExcepcion):
     pass
 
 def validar_mejorada(nomb_cplt):
