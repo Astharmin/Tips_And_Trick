@@ -7,10 +7,6 @@ class Auto:
         self.modelo = modelo
         self.color = color
 
-# Por default solo muestra el nombre de la clase y el ID
-audi_a3 = Auto('Audi', 'A3', 'Azul')
-print(f'Carro: {audi_a3}')
-
 class AutoStr:
     def __init__(self, marca, modelo, color):
         self.marca = marca
@@ -33,18 +29,23 @@ class AutoStr:
                 f'{self.modelo!r},'
                 f'{self.color!r})')
 
-audi_a1 = AutoStr('Audi', 'A1', 'Negro')
-# Hay varias formas de imprimir un Objeto
-print(audi_a1)
-print(audi_a1.__str__())
-print(str(audi_a1))
-print('{}'.format(audi_a1))
-print(f'{audi_a1}')
+if __name__ == '__main__':
+    # Por default solo muestra el nombre de la clase y el ID
+    audi_a3 = Auto('Audi', 'A3', 'Azul')
+    print(f'Carro: {audi_a3}')
 
-# Es mas recomendable usar __repr__ en lugar __str__
-print([audi_a1])
-print(f'{audi_a1!r}')
+    audi_a1 = AutoStr('Audi', 'A1', 'Negro')
+    # Hay varias formas de imprimir un Objeto
+    print(audi_a1)
+    print(audi_a1.__str__())
+    print(str(audi_a1))
+    print('{}'.format(audi_a1))
+    print(f'{audi_a1}')
 
-# Podemos escojer que metodo usar
-print(str(audi_a1))
-print(repr(audi_a1))
+    # Es mas recomendable usar __repr__ en lugar __str__
+    print([audi_a1])
+    print(f'{audi_a1!r}')
+
+    # Podemos escojer que metodo usar
+    print(str(audi_a1))
+    print(repr(audi_a1))
