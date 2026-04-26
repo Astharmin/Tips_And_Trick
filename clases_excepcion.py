@@ -35,4 +35,10 @@ if __name__ == '__main__':
     # validar(nomb_A)
 
     nomb_B = 'Ka'
-    validar_mejorada(nomb_B)
+    
+    try:
+        validar_mejorada(nomb_B)
+    except ClaseExcepcion as e:
+        print(f'{type(e).__name__}, '
+              f'linea {e.__traceback__.tb_lineno} '
+              f'en {__file__}: {e}')
