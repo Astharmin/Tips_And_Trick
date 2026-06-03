@@ -1,7 +1,6 @@
 import copy
 
 # Clonacion o copia de objetos
-
 # Ejemplo de Copina Superficial
 
 lista_a = [[1, 2], [3, 4], [5, 6]]
@@ -26,7 +25,6 @@ print('\nLa copia solo fue superficial, solo se copia en referencia')
 print(f'\nLista a: {lista_a}')
 print(f'Lista b: {lista_b}')
 
-<<<<<<< Updated upstream
 # Crear una copia profundas
 lista_c = [[1,2],[3,4],[5,6]]
 lista_d = copy.deepcopy(lista_c)
@@ -43,6 +41,4 @@ print(f'Lista c: {lista_c}')
 print(f'Lista d: {lista_d}')
 
 # Metodo copy sirve para realizar copias tipo shallow (Poco profundas)
-=======
 
->>>>>>> Stashed changes
