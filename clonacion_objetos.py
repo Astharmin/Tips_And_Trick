@@ -39,6 +39,3 @@ print(f'Lista d: {lista_d}')
 lista_c[0][1] = 'C'
 print(f'Lista c: {lista_c}')
 print(f'Lista d: {lista_d}')
-
-# Metodo copy sirve para realizar copias tipo shallow (Poco profundas)
-
