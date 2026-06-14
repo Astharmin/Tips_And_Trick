@@ -31,6 +31,18 @@ print(f'\nValores de la tupla persona2:\n{nombre}, {apellido}, {edad}\n')
 
 # Asi mismo tambine se pueden desempaquetar pasandolos como argumentos
 print(*per2)
+print()
 
 # NameTuple son inmutables al igual que las tuplas
 # per2.Edad = 23 <----- esto es ilegal
+
+# Subclases de NamedTuples
+class Persona3(Persona2):
+      # Agregamos un nuevo metodo a la clase Hija
+      def conver_mayus(self):
+            return f'Nombre Completo: {self.Nombre.upper()} {self.Apellido.upper()}'
+
+if __name__ == '__main__':
+      per3 = Persona3('Maria', 'Laura', 35)
+      print(per3)
+      print(per3.conver_mayus())
