@@ -11,3 +11,26 @@ print(persona1)
 Persona2 = namedtuple('Persona2', ['Nombre', 'Apellido', 'Edad'])
 per2 = Persona2('Juan', 'Gomez', 30)
 print(per2)
+
+# Podemos acceder a los atributos de manera individual por nombres
+print(f'\nNombre: {per2.Nombre}\n'
+      f'Apellido: {per2.Apellido}\n'
+      f'Edad: {per2.Edad}')
+
+# Tambien se puede acceder por indice
+print(f'\nNombre: {persona1[0]}\n'
+      f'Apellido: {persona1[1]}\n'
+      f'Edad: {persona1[2]}')
+
+# Podemos convertir los valores a una tupla literal
+print(f'\n{tuple(persona1)}')
+
+# Se pueden empaquetar los elementos de nuestra tupla
+nombre, apellido, edad = per2
+print(f'\nValores de la tupla persona2:\n{nombre}, {apellido}, {edad}\n')
+
+# Asi mismo tambine se pueden desempaquetar pasandolos como argumentos
+print(*per2)
+
+# NameTuple son inmutables al igual que las tuplas
+# per2.Edad = 23 <----- esto es ilegal
