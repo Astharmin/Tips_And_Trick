@@ -42,7 +42,20 @@ class Persona3(Persona2):
       def conver_mayus(self):
             return f'Nombre Completo: {self.Nombre.upper()} {self.Apellido.upper()}'
 
-if __name__ == '__main__':
-      per3 = Persona3('Maria', 'Laura', 35)
-      print(per3)
-      print(per3.conver_mayus())
+per3 = Persona3('Maria', 'Laura', 35)
+print(per3)
+print(per3.conver_mayus())
+
+# Otra forma de hacer Extend de la clase (Recomendada)
+Persona4 = namedtuple('Persona4', Persona2._fields + ('email',))
+
+# Se crea un objeto respectivo con el nuevo atributo
+per4 = Persona4('Maria', 'Quintero', 35, 'Mquintero@mail.com')
+print(f'\n{per4}\n')
+
+# Metodos de ayuda (Build-in)
+print(per4._fields)
+
+# Metodo de convercion a diccionario
+dicc_per4 = per4._asdict()
+print(dicc_per4)
