@@ -34,6 +34,8 @@ Cada archivo es una lección práctica. Lo clonas, lo ejecutas, lo modificas y l
 | ✅ **Aserciones** | `Asersiones.py` | Validar condiciones en desarrollo con `assert` | ⭐ |
 | ❌ **Retorno None** | `retorno_none.py` | Por qué las funciones sin `return` devuelven `None` y cómo usarlo | ⭐ |
 | 📦 **Módulos** | `Modulo.py` | Cómo organizar y reutilizar código | ⭐⭐ |
+| 📇 **Named Tuples** | `named_tuple.py` | Tuplas con nombre para código más legible y autodocumentado | ⭐⭐ |
+| 🏷️ **Variables de clase vs instancia** | `variables_clases_instancia.py` | La diferencia entre atributos compartidos y propios de cada objeto | ⭐⭐⭐ |
 
 > 💡 **Nota:** La dificultad es orientativa. Un nivel 4 (⭐⭐⭐⭐) no significa que sea imposible, sino que requiere más práctica o nociones previas.
 
@@ -65,8 +67,10 @@ Tips_And_Trick/
 ├── 🐍 guion_bajo_simple.py            # Variables "privadas" por convención
 ├── 🐍 identidad_objetos.py            # El operador 'is' vs '=='
 ├── 🐍 Modulo.py                       # Organización y reutilización
+├── 🐍 named_tuple.py                  # Tuplas con nombre (collections.namedtuple)
 ├── 🐍 repr_objetos.py                 # __str__ vs __repr__
 ├── 🐍 retorno_none.py                 # El retorno implícito None
+├── 🐍 variables_clases_instancia.py   # Atributos de clase vs de instancia
 ├── 🐍 zen_python.py                   # Los 19 aforismos del Zen
 │
 ├── 📁 __pycache__/                    # Bytecode compilado (ignorar)
