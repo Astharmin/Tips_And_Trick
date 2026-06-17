@@ -14,6 +14,21 @@ Perro.nombre = 'Clase perro'
 # Creamos una variable que no este asignada a los objetos
 Perro.num_orejas = 2
 
+# Contador de objetos de una clase
+class ContadorObjetosErronea:
+    num_instancias = 0
+
+    def __init__(self):
+        # Aqui va a estar el error
+        self.num_instancias = +1
+
+class ContadorObjetos:
+    num_instancias = 0
+
+    def __init__(self):
+        # Incrementamos la variable de clase
+        self.__class__.num_instancias += 1
+
 if __name__ == '__main__':
     pongoso = Perro('Pongoso')
     chichigua = Perro('Chihigua')
@@ -42,3 +57,20 @@ if __name__ == '__main__':
 
     # Accedemos a una variable de clase que no esta en las objetos
     print(f'Cuantas orejas tiene el perro: {pongoso.num_orejas}')
+
+    # Implementacion erronea
+    print()
+    print(' Contador de Instancias Erroneo '.center(50,'*'))
+    print(f'\nContador Variable: {ContadorObjetosErronea.num_instancias}')
+    print(f'Contador: {ContadorObjetosErronea().num_instancias}')
+    print(f'Contador: {ContadorObjetosErronea().num_instancias}')
+    print(f'\nContador Variable: {ContadorObjetosErronea.num_instancias}')
+
+    # Implementacion corregida
+    print()
+    print(' Contador de Instancias '.center(50, '*'))
+    print(f'\nContador Variable: {ContadorObjetos.num_instancias}')
+    print(f'Contador: {ContadorObjetos().num_instancias}')
+    print(f'Contador: {ContadorObjetos().num_instancias}')
+    print(f'Contador: {ContadorObjetos().num_instancias}')
+    print(f'\nContador Variable: {ContadorObjetos.num_instancias}')
