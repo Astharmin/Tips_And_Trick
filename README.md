@@ -36,6 +36,7 @@ Cada archivo es una lección práctica. Lo clonas, lo ejecutas, lo modificas y l
 | 📦 **Módulos** | `Modulo.py` | Cómo organizar y reutilizar código | ⭐⭐ |
 | 📇 **Named Tuples** | `named_tuple.py` | Tuplas con nombre para código más legible y autodocumentado | ⭐⭐ |
 | 🏷️ **Variables de clase vs instancia** | `variables_clases_instancia.py` | La diferencia entre atributos compartidos y propios de cada objeto | ⭐⭐⭐ |
+| 🧰 **Métodos de instancia, clase y estáticos** | `metodos_instancia_clases_static.py` | Cuándo y cómo usar `@classmethod` y `@staticmethod` | ⭐⭐⭐ |
 
 > 💡 **Nota:** La dificultad es orientativa. Un nivel 4 (⭐⭐⭐⭐) no significa que sea imposible, sino que requiere más práctica o nociones previas.
 
@@ -66,6 +67,7 @@ Tips_And_Trick/
 ├── 🐍 funciones_lambda.py             # Funciones anónimas y comprehensions
 ├── 🐍 guion_bajo_simple.py            # Variables "privadas" por convención
 ├── 🐍 identidad_objetos.py            # El operador 'is' vs '=='
+├── 🐍 metodos_instancia_clases_static.py  # Métodos @classmethod y @staticmethod
 ├── 🐍 Modulo.py                       # Organización y reutilización
 ├── 🐍 named_tuple.py                  # Tuplas con nombre (collections.namedtuple)
 ├── 🐍 repr_objetos.py                 # __str__ vs __repr__
