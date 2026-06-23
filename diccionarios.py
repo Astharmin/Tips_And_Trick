@@ -36,7 +36,8 @@ Si queremos garantizar un orden de insercion,
 entonces usaremos la paqueteria de OrdedDict
 '''
 
-from collections import OrderedDict, defaultdict
+from collections import OrderedDict, defaultdict, ChainMap
+from types import MappingProxyType
 
 dicc_ordenado = OrderedDict(uno=1,dos=2,tres=3)
 print(f'Diccionario: {dicc_ordenado}')
@@ -88,3 +89,38 @@ print(f'Diccionario: {dicc_default_list}\n')
 print(dicc_default_list.items())
 print(dicc_default_list.keys())
 print(dicc_default_list.values())
+
+# Buscar en multiples diccionario
+dicc = {'uno': 1, 'dos': 2, 'tres': 3}
+dicc2 = {'cuatro': 4, 'cinco': 5, 'seis': 6}
+
+# Procedemos a combinar ambos diccionarios
+comb_dic = ChainMap(dicc, dicc2)
+print(f'\nDiccionario combinado: {comb_dic}')
+
+# Buscamos en todos los diccionarios
+print(f'\nElemento encontrado: {comb_dic['cinco']}\n')
+
+# Error keyerror
+# print(comb_dic['siete'])
+
+# obtencion de diccionarios de solo lectura (read-only)
+dicc_modificable = {'uno': 1, 'dos': 2, 'tres': 3}
+dicc_solo_lectura = MappingProxyType(dicc_modificable)
+
+print(f'Diccionario de solo lectura:\n'
+      f'{dicc_solo_lectura}')
+print(f'Elemento del diccionario: {dicc_solo_lectura['dos']}')
+
+'''
+Si queremos modiicar el diccionario de solo lectura
+arrojara un error de TypeError.
+'''
+# dicc_solo_lectura['uno'] = -1
+
+'''
+Si modificamos el diccionario mutable
+afecta al de solo lectura.
+'''
+dicc_modificable['dos'] = 22
+print(f'Valores modificados: {dicc_modificable,dicc_solo_lectura}')
