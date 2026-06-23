@@ -29,4 +29,38 @@ lista = [1,2,3]
 
 tupla = (1,2,3)
 diccionario_correcto = {tupla:'A'}
-print(diccionario_correcto)
+print(f'{diccionario_correcto}\n')
+
+'''
+Si queremos garantizar un orden de insercion, 
+entonces usaremos la paqueteria de OrdedDict
+'''
+
+from collections import OrderedDict
+
+dicc_ordenado = OrderedDict(uno=1,dos=2,tres=3)
+print(f'Diccionario: {dicc_ordenado}')
+
+# Agregamos un nuevo elemneto
+dicc_ordenado['cuatro'] = 4
+print(f'Diccionario: {dicc_ordenado}\n')
+
+# Obtener las llaves
+print(f'llaves del diccionario ordenado:\n'
+      f'{dicc_ordenado.keys()}')
+
+# MOdiicamos el valor de las llaves
+dicc_ordenado['uno'] = -1
+print(f'\nDiccionario: {dicc_ordenado}\n')
+'''
+Como podemos observar en el ejemplo,
+se mantiene el orden de las llaves.
+'''
+
+# Eliminamos una llave
+dicc_ordenado.pop('tres')
+print(f'Diccionario: {dicc_ordenado}\n')
+
+# Volvemos a insertar el elemento eliminado
+dicc_ordenado['tres']=3
+print(f'Diccionario: {dicc_ordenado}\n')
