@@ -36,7 +36,7 @@ Si queremos garantizar un orden de insercion,
 entonces usaremos la paqueteria de OrdedDict
 '''
 
-from collections import OrderedDict
+from collections import OrderedDict, defaultdict
 
 dicc_ordenado = OrderedDict(uno=1,dos=2,tres=3)
 print(f'Diccionario: {dicc_ordenado}')
@@ -66,3 +66,25 @@ dicc_ordenado['tres']=3
 print(f'Diccionario: {dicc_ordenado}\n')
 
 # DefaultDict es una subclase de la clase dict
+dicc_default = defaultdict(lambda : 'Valor Erroneo')
+dicc_default['a'] = 1
+dicc_default['b'] = 2
+dicc_default['c'] = 3
+
+print(f'Diccionario: {dicc_default.items()}')
+
+# Imprimimos un elemento no existente
+print(f'Diccionario: {dicc_default['d']}\n')
+
+# Podemos crear valores como una lista
+dicc_default_list = defaultdict(list)
+dicc_default_list['Nombres'].append('Juan')
+dicc_default_list['Nombres'].append('Karla')
+dicc_default_list['Nombres'].append('Pedro')
+
+print(f'Diccionario: {dicc_default_list}\n')
+
+# Observamos que se pueden seguir usando las funciones asociados a diccionarios
+print(dicc_default_list.items())
+print(dicc_default_list.keys())
+print(dicc_default_list.values())
