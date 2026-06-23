@@ -6,7 +6,7 @@
 
 ## 📖 ¿Qué es esto?
 
-Este repositorio es mi **cuaderno de bitácora digital** — el último módulo de mi formación como "Experto en Python" en Udemy. Aquí no hay teoría repetida: hay **código que corre**, ejemplos concretos y explicaciones directas de los trucos que diferencian a un programador funcional de uno que realmente domina Python.
+Este repositorio es mi **cuaderno de bitácora digital** — el último módulo de mi formación como "Experto en Python". Aquí no hay teoría repetida: hay **código que corre**, ejemplos concretos y explicaciones directas de los trucos que diferencian a un programador funcional de uno que realmente domina Python.
 
 Cada archivo es una lección práctica. Lo clonas, lo ejecutas, lo modificas y lo entiendes.
 
