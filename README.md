@@ -37,6 +37,7 @@ Cada archivo es una lección práctica. Lo clonas, lo ejecutas, lo modificas y l
 | 📇 **Named Tuples** | `named_tuple.py` | Tuplas con nombre para código más legible y autodocumentado | ⭐⭐ |
 | 🏷️ **Variables de clase vs instancia** | `variables_clases_instancia.py` | La diferencia entre atributos compartidos y propios de cada objeto | ⭐⭐⭐ |
 | 🧰 **Métodos de instancia, clase y estáticos** | `metodos_instancia_clases_static.py` | Cuándo y cómo usar `@classmethod` y `@staticmethod` | ⭐⭐⭐ |
+| 📖 **Diccionarios avanzados** | `diccionarios.py` | `OrderedDict`, `defaultdict` y trucos con diccionarios | ⭐⭐⭐ |
 
 > 💡 **Nota:** La dificultad es orientativa. Un nivel 4 (⭐⭐⭐⭐) no significa que sea imposible, sino que requiere más práctica o nociones previas.
 
@@ -56,6 +57,7 @@ Tips_And_Trick/
 ├── 🐍 clonacion_objetos_atrib.py      # Copia con atributos anidados
 ├── 🐍 Context_Manager.py              # Gestión de recursos con 'with'
 ├── 🐍 decoradores.py                  # Decoradores paso a paso
+├── 🐍 diccionarios.py                 # OrderedDict, defaultdict y trucos con dicts
 ├── 🐍 doble_PisoBajo.py               # Métodos especiales (__dunder__ básico)
 ├── 🐍 doble_PisoBajo2.py              # Más métodos especiales
 ├── 🐍 dunder.py                       # Métodos mágicos completos

@@ -49,7 +49,7 @@ print(f'Diccionario: {dicc_ordenado}\n')
 print(f'llaves del diccionario ordenado:\n'
       f'{dicc_ordenado.keys()}')
 
-# MOdiicamos el valor de las llaves
+# Modiicamos el valor de las llaves
 dicc_ordenado['uno'] = -1
 print(f'\nDiccionario: {dicc_ordenado}\n')
 '''
@@ -64,3 +64,5 @@ print(f'Diccionario: {dicc_ordenado}\n')
 # Volvemos a insertar el elemento eliminado
 dicc_ordenado['tres']=3
 print(f'Diccionario: {dicc_ordenado}\n')
+
+# DefaultDict es una subclase de la clase dict
